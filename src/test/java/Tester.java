@@ -19,7 +19,7 @@ public class Tester
     ////////////////////////////////////////////////////////////////////////////
     //testing Workflow class
    @Test
-    public static void checkWorkflow() {
+    public void checkWorkflow() {
 
         Workflow wf = new Workflow();
         assertTrue(wf.getTable() != null);
@@ -31,7 +31,7 @@ public class Tester
     //Business Object Test cases
   
     @Test
-    public static void checkAddDB() {
+    public void checkAddDB() {
 
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, obj);
@@ -56,7 +56,7 @@ public class Tester
 
 
     @Test
-    public static void checkRetrieveDB() {
+    public void checkRetrieveDB() {
 
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, obj);
