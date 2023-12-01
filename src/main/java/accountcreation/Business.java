@@ -31,13 +31,5 @@ public class Business {
         return dataBase;
     }
 
-    //to be implemented
-    public void sendApprovalEmail(DataEntry immigrant) {
-        
-    }
-
-    public void sendDenialEmail(DataEntry immigrant) {
-        
-    }
     
 }
