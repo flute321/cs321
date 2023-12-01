@@ -80,15 +80,6 @@ public class Tester
     }
 
 
-    public static void main(String[] args)
-    {
-       checkAddDB();
-       checkRetrieveDB();
-       checkWorkflow();
-
-    }
-
-
 
 
 }
