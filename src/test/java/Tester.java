@@ -1,15 +1,14 @@
 package CS321.src.test;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 
 import CS321.src.main.Workflow;
 import CS321.src.main.Approval;
 import CS321.src.main.Business;
 import CS321.src.main.DataEntry;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.File;
 
 import java.beans.Transient;
@@ -20,7 +19,7 @@ public class Tester
     ////////////////////////////////////////////////////////////////////////////
     //testing Workflow class
    @Test
-    public void checkWorkflow() {
+    public static void checkWorkflow() {
 
         Workflow wf = new Workflow();
         assertTrue(wf.getTable() != null);
@@ -32,7 +31,7 @@ public class Tester
     //Business Object Test cases
   
     @Test
-    public void checkAddDB() {
+    public static void checkAddDB() {
 
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, obj);
@@ -57,7 +56,7 @@ public class Tester
 
 
     @Test
-    public void checkRetrieveDB() {
+    public static void checkRetrieveDB() {
 
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, obj);
