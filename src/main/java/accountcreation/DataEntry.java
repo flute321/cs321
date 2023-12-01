@@ -65,7 +65,7 @@ public class DataEntry extends JFrame{
     //to launch application
     public DataEntry(Workflow table, Business immigrantRequest) {
 
-        if(table == null || immigrantRequest == null){
+        if(table != null && immigrantRequest != null){
                     //initalize the workflow table
             workTable = table;
         
