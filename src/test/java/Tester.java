@@ -33,19 +33,6 @@ public class Tester
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, null);
 
-
-        // Valid input
-        dataEntry.setFirstName("John");
-        dataEntry.setLastName("Doe");
-        dataEntry.setEmail("john.doe@example.com");
-        dataEntry.setCity("City");
-        dataEntry.setState("State");
-        dataEntry.setJob("Job");
-        dataEntry.setEducation("Education");
-        dataEntry.setPhoneNumber("12345678901");
-        dataEntry.setDob(20201231); 
-        dataEntry.setPhoneNumber("1234567890"); 
-
         obj.add_DB(dataEntry);
         assertTrue(obj.getSize() == 0);
 
@@ -57,20 +44,6 @@ public class Tester
 
         Business obj = new Business();
         DataEntry dataEntry = new DataEntry(null, null);
-
-
-        // Valid input
-        dataEntry.setFirstName("John");
-        dataEntry.setLastName("Doe");
-        dataEntry.setEmail("john.doe@example.com");
-        dataEntry.setCity("City");
-        dataEntry.setState("State");
-        dataEntry.setJob("Job");
-        dataEntry.setEducation("Education");
-        dataEntry.setPhoneNumber("12345678901");
-        dataEntry.setDob(20201231); 
-        dataEntry.setPhoneNumber("1234567890"); 
-
         obj.add_DB(dataEntry);
         assertTrue(obj.retrieve_DB(0) != null);
 
