@@ -4,10 +4,11 @@ import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Approval;
-import Business;
-import DataEntry;
-import Workflow;
+
+import CS321.src.main.Approval;
+import CS321.src.main.Business;
+import CS321.src.main.DataEntry;
+import CS321.src.main.Workflow;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.File;
