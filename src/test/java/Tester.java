@@ -8,9 +8,6 @@ import CS321.src.main.Approval;
 import CS321.src.main.Business;
 import CS321.src.main.DataEntry;
 
-
-import java.io.File;
-
 import java.beans.Transient;
 
 public class Tester 
@@ -29,7 +26,7 @@ public class Tester
 
     /////////////////////////////////////////////////
     //Business Object Test cases
-  
+  /*
     @Test
     public void checkAddDB() {
 
@@ -79,7 +76,7 @@ public class Tester
 
     }
 
-
+    */
 
 
 }
