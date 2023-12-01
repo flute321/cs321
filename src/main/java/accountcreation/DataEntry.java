@@ -65,89 +65,94 @@ public class DataEntry extends JFrame{
     //to launch application
     public DataEntry(Workflow table, Business immigrantRequest) {
 
-        //initalize the workflow table
-        workTable = table;
+        if(table == null || immigrantRequest == null){
+                    //initalize the workflow table
+            workTable = table;
         
-        //initialize the business object
-        business = immigrantRequest;
-        
-        //initialize the quit and submit button
-        quit = false;
-        submit = false;
+            //initialize the business object
+            business = immigrantRequest;
+            
+            //initialize the quit and submit button
+            quit = false;
+            submit = false;
 
-        //create the frame
-        JFrame frame = new JFrame("Enter Your Information");
-        
-        //set size
-        frame.setSize(400, 150);
+            //create the frame
+            JFrame frame = new JFrame("Enter Your Information");
+            
+            //set size
+            frame.setSize(400, 150);
 
-        //allocate sizing for fields
-        enterFirst = new JTextField(10);
-        enterLast = new JTextField(10);
-        enterEmail = new JTextField(10);
-        enterAddress = new JTextField(10);
-        enterCity = new JTextField(10);
-        enterState = new JTextField(10);
-        enterZipcode = new JTextField(10);
-        enterDob = new JTextField(10);
-        enterPhone = new JTextField(10);
-        enterJob = new JTextField(10);
-        enterEducation = new JTextField(10);
-        saveIt = new JButton("Submit");
-        quitIt = new JButton("Quit");
+            //allocate sizing for fields
+            enterFirst = new JTextField(10);
+            enterLast = new JTextField(10);
+            enterEmail = new JTextField(10);
+            enterAddress = new JTextField(10);
+            enterCity = new JTextField(10);
+            enterState = new JTextField(10);
+            enterZipcode = new JTextField(10);
+            enterDob = new JTextField(10);
+            enterPhone = new JTextField(10);
+            enterJob = new JTextField(10);
+            enterEducation = new JTextField(10);
+            saveIt = new JButton("Submit");
+            quitIt = new JButton("Quit");
 
-        //create the JPanel
-        JPanel panel = new JPanel();
+            //create the JPanel
+            JPanel panel = new JPanel();
 
-        //performed when the submit button is pressed
-        saveIt.addActionListener(new listenToSubmit());
+            //performed when the submit button is pressed
+            saveIt.addActionListener(new listenToSubmit());
 
-        //performed when the quit button is pressed
-        quitIt.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
+            //performed when the quit button is pressed
+            quitIt.addActionListener(new ActionListener()
             {
-                frame.setVisible(false);
-                quit = true;
-            }
-        });
-    
-        //add all the labels and text boxes for user input
-        panel.add(new JLabel("First Name: "));
-        panel.add(enterFirst);
-        panel.add(new JLabel("Last Name: "));
-        panel.add(enterLast);
-        panel.add(new JLabel("Address: "));
-        panel.add(enterAddress);
-        panel.add(new JLabel("Email: "));
-        panel.add(enterEmail);
-        panel.add(new JLabel("City: "));
-        panel.add(enterCity);
-        panel.add(new JLabel("State: "));
-        panel.add(enterState);
-        panel.add(new JLabel("Zipcode: "));
-        panel.add(enterZipcode);
-        panel.add(new JLabel("DOB: "));
-        panel.add(enterDob);
-        panel.add(new JLabel("Phone Number: "));
-        panel.add(enterPhone);
-        panel.add(new JLabel("Recent Job: "));
-        panel.add(enterJob);
-        panel.add(new JLabel("Highest Level of Education: "));
-        panel.add(enterEducation);
+                public void actionPerformed(ActionEvent e)
+                {
+                    frame.setVisible(false);
+                    quit = true;
+                }
+            });
         
-        //add the save button
-        panel.add(saveIt);
+            //add all the labels and text boxes for user input
+            panel.add(new JLabel("First Name: "));
+            panel.add(enterFirst);
+            panel.add(new JLabel("Last Name: "));
+            panel.add(enterLast);
+            panel.add(new JLabel("Address: "));
+            panel.add(enterAddress);
+            panel.add(new JLabel("Email: "));
+            panel.add(enterEmail);
+            panel.add(new JLabel("City: "));
+            panel.add(enterCity);
+            panel.add(new JLabel("State: "));
+            panel.add(enterState);
+            panel.add(new JLabel("Zipcode: "));
+            panel.add(enterZipcode);
+            panel.add(new JLabel("DOB: "));
+            panel.add(enterDob);
+            panel.add(new JLabel("Phone Number: "));
+            panel.add(enterPhone);
+            panel.add(new JLabel("Recent Job: "));
+            panel.add(enterJob);
+            panel.add(new JLabel("Highest Level of Education: "));
+            panel.add(enterEducation);
+            
+            //add the save button
+            panel.add(saveIt);
 
-        //add the quit button
-        panel.add(quitIt);
-        
-        //add the panel to the frame
-        frame.add(panel);
+            //add the quit button
+            panel.add(quitIt);
+            
+            //add the panel to the frame
+            frame.add(panel);
 
-        frame.add(panel, BorderLayout.CENTER);
-        frame.setSize(500,500);
-        frame.setVisible(true);
+            frame.add(panel, BorderLayout.CENTER);
+            frame.setSize(500,500);
+            frame.setVisible(true);
+
+        }
+
+
     }
 
 

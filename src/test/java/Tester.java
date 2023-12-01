@@ -26,7 +26,7 @@ public class Tester
 
     /////////////////////////////////////////////////
     //Business Object Test cases
-  /*
+  
     @Test
     public void checkAddDB() {
 
@@ -76,7 +76,7 @@ public class Tester
 
     }
 
-    */
+    
 
 
 }
