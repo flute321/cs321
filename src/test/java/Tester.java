@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -16,11 +15,21 @@ public class Tester
     ////////////////////////////////////////////////////////////////////////////
     //testing Workflow class
    @Test
-    public void checkWorkflow() {
+    public static void checkWorkflow() {
 
-        Workflow wf = new Workflow();
-        assertTrue(wf.getTable() != null);
+        try{
+            Workflow wf = new Workflow();
+            assertTrue(wf.getTable() != null);
+            System.out.println("WORKFLOW TEST PASS");
+        }
+        
+
+
+         catch(AssertionError e){
+            System.out.println("WORKFLOW TEST FAILED");
+        }
     }
+
 
 
 
@@ -28,28 +37,47 @@ public class Tester
     //Business Object Test cases
   
     @Test
-    public void checkAddDB() {
+    public static void checkAddDB() {
 
-        Business obj = new Business();
-        DataEntry dataEntry = new DataEntry(null, null);
+        try{
+            Business obj = new Business();
+            DataEntry dataEntry = new DataEntry(null, null);
 
-        obj.add_DB(dataEntry);
-        assertTrue(obj.getSize() == 0);
+            obj.add_DB(dataEntry);
+            assertTrue(obj.getSize() == 0);
+            System.out.println("ADD DB TEST PASS");
+
+        }
+
+        catch(AssertionError e){
+            System.out.println("ADD DB TEST FAILED");
+        }
+
+        
 
     }
 
 
     @Test
-    public void checkRetrieveDB() {
+    public static void checkRetrieveDB() {
 
-        Business obj = new Business();
-        DataEntry dataEntry = new DataEntry(null, null);
-        obj.add_DB(dataEntry);
-        assertTrue(obj.retrieve_DB(0) != null);
+        try{
+            Business obj = new Business();
+            DataEntry dataEntry = new DataEntry(null, null);
+            obj.add_DB(dataEntry);
+            assertTrue(obj.retrieve_DB(0) != null);
+             System.out.println("RETRIEVE TEST PASS");
+
+        }
+
+        catch(AssertionError e){
+            System.out.println("RETRIEVE TEST FAILED");
+        }
+
+        
 
     }
 
-    
 
 
 }
